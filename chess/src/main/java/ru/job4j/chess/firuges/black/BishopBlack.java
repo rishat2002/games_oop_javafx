@@ -30,16 +30,18 @@ public class BishopBlack implements Figure {
         }
        int size = Math.abs(source.x-dest.x);
        Cell[] steps = new Cell[size];
-       int deltaX = (source.x-dest.x)/(Math.abs(source.x-dest.x));
-       int deltaY =(source.y-dest.y)/(Math.abs(source.y-dest.y));
+       int deltaX = (dest.x-source.x)/(Math.abs(source.x-dest.x));
+       int deltaY =(dest.y-source.y)/(Math.abs(source.y-dest.y));
        int x=source.x;
        int y=source.y;
        for (int index = 0; index < size; index++) {
-         steps[index] =Cell(x+deltaX,y+deltaY);
+           x=x+deltaX;
+           y=y+deltaY;
+         steps[index] =Cell.findCell(x,y);
+           System.out.println(steps[index]);
        }
         return steps;
     }
-
     public boolean isDiagonal(Cell source, Cell dest) {
         boolean diagonal=false;
         if (Math.abs(source.x-dest.x)==Math.abs(source.y-dest.y)) {
@@ -52,5 +54,6 @@ public class BishopBlack implements Figure {
     public Figure copy(Cell dest) {
         return new BishopBlack(dest);
     }
+
 
 }
