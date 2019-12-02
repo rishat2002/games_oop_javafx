@@ -12,16 +12,18 @@ public enum Cell {
 
     public final int x;
     public final int y;
+
     Cell(int x, int y) {
         this.x = x;
         this.y = y;
     }
-    public static Cell findCell(int x,int y) {
-        Cell n=null;
-        Cell[] allCell=Cell.values();
-        for (int i=0;i<allCell.length;i++) {
-            if(allCell[i].x==x && allCell[i].y==y) {
-                n=allCell[i];
+
+    public static Cell findCell(int x, int y) {
+        Cell n = null;
+        Cell[] allCell = Cell.values();
+        for (int i = 0; i < allCell.length; i++) {
+            if (allCell[i].x == x && allCell[i].y == y) {
+                n = allCell[i];
             }
         }
         return n;
