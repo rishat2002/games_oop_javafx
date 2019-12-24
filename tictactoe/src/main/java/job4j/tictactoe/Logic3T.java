@@ -22,6 +22,7 @@ public class Logic3T {
             }
         }
         return result;
+
     }
 
     public boolean isWinnerX() {

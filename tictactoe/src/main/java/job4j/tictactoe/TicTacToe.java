@@ -31,6 +31,7 @@ public class TicTacToe extends Application {
         rect.setFill(Color.WHITE);
         rect.setStroke(Color.BLACK);
         return rect;
+
     }
 
     private Group buildMarkO(double x, double y, int size) {
