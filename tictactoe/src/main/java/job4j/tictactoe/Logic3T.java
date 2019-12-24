@@ -9,6 +9,7 @@ public class Logic3T {
         this.table = table;
     }
 
+
     public boolean fillBy(Predicate<Figure3T> predicate, int startX, int startY, int deltaX, int deltaY) {
         boolean result = true;
         for (int index = 0; index != this.table.length; index++) {

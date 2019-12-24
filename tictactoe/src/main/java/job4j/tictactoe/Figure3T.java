@@ -9,6 +9,7 @@ public class Figure3T extends Rectangle {
     public Figure3T() {
     }
 
+
     public Figure3T(boolean markX, boolean markO) {
         this.markX = markX;
         this.markO = markO;
